@@ -275,9 +275,9 @@ static void wiringPiISRWrapper(int pin, int mode, PyObject *PyFunc);
       $2 = PyString_Size($input);
 };
 
-%typemap(argout) (unsigned char *data) {
-      $result = SWIG_Python_AppendOutput($result, PyString_FromStringAndSize((char *) $1, result));
-};
+//%typemap(argout) (unsigned char *data) {
+//      $result = SWIG_Python_AppendOutput($result, PyString_FromStringAndSize((char *) $1, result));
+//};
 
 %include "bindings.i"
 %include "constants.py"
